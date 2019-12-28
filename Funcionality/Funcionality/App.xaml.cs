@@ -8,7 +8,7 @@ namespace Funcionality
         {
             InitializeComponent();
 
-            MainPage = new Views.MasterDetailPage();
+            MainPage = new Views.LoginPage();
         }
 
         protected override void OnStart()

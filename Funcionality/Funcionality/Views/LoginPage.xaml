@@ -5,13 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:base="clr-namespace:Funcionality.ViewModels.Base;assembly=Funcionality"
              mc:Ignorable="d"
-             x:Class="Funcionality.Views.MasterDetailPageHome"
-             base:ViewModelLocator.AutoWireViewModel = "true">
+             x:Class="Funcionality.Views.LoginPage"
+             base:ViewModelLocator.AutoWireViewModel="True">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Home!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0,10,0">
+            <Entry Placeholder="Enter username"  BindingContext="{Binding Username}"/>
+            <Entry Placeholder="Enter password"  BindingContext="{Binding Password}"/>
+            <Button x:Name="BtnLogin" Text="Login" Command="{Binding BtnLoginCommand}"/> 
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
