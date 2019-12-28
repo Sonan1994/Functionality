@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+using Funcionality.ViewModels.Base;
 
 namespace Funcionality.ViewModels
 {
-    public class MasterDetailPageMasterViewModel : INotifyPropertyChanged
+    public class MasterDetailPageMasterViewModel : ViewModelBase
     {
         public ObservableCollection<MasterDetailPageMenuItem> MenuItems { get; set; }
 
@@ -13,19 +12,5 @@ namespace Funcionality.ViewModels
         {
             MenuItems = new ObservableCollection<MasterDetailPageMenuItem>(items);
         }
-
-        #region INotifyPropertyChanged Implementation
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            if (PropertyChanged == null)
-                return;
-
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        #endregion
     }
 }
